@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentalLink360 Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LEFT SIDE -->
+    <div class="left-panel animate-slide-left">
+        <div class="left-content">
+            <div class="logo-row">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Tooth_icon_purple.svg/1024px-Tooth_icon_purple.svg.png"
+                     class="tooth-logo">
+
+                <h1 class="brand-title">
+                    <span style="color:#3f88ff;">Dental</span>Link360
+                </h1>
+            </div>
+
+            <p class="slogan">Your smile, our priority.</p>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right-panel d-flex justify-content-center align-items-center animate-fade-up">
+        <div class="login-box">
+
+            <h2 class="fw-bold">Welcome Back</h2>
+            <p class="subtitle">Enter your credentials to continue</p>
+
+            <!-- ADDED action & method -->
+            <form action="index.php" method="POST" class="needs-validation" novalidate>
+
+                <div class="input-group mb-3 position-relative">
+                    <i data-lucide="user"></i>
+                    <input type="text" name="email" class="form-control"
+                           placeholder="Enter username or email" required>
+                    <div class="invalid-feedback">Username is required.</div>
+                </div>
+
+                <div class="input-group mb-2 position-relative">
+                    <i data-lucide="lock"></i>
+                    <input type="password" name="password" class="form-control"
+                           placeholder="Enter password" required>
+                    <div class="invalid-feedback">Password is required.</div>
+                </div>
+
+                <div class="forgot text-end">
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button class="login-btn btn w-100">Log In</button>
+            </form>
+
+            <p class="register-text mt-3">
+                You don’t have an account?
+                <a href="register_user/register.html">Register</a>
+            </p>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentalLink360 - Profile</title>
+    <link rel="stylesheet" href="admin_profile_view.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            <i data-lucide="tooth"></i>
+            <span>DentalLink360</span>
+        </div>
+
+        <nav>
+            <a href="#"><i data-lucide="home"></i> Dashboard</a>
+            <a href="#"><i data-lucide="users"></i> User Management</a>
+            <a href="#"><i data-lucide="calendar"></i> Appointment</a>
+            <a href="#"><i data-lucide="file-text"></i> Services</a>
+            <a href="#"><i data-lucide="credit-card"></i> Payments</a>
+            <a href="#"><i data-lucide="list"></i> Transactions</a>
+            <a href="#"><i data-lucide="book-open"></i> Logs</a>
+            <a href="#"><i data-lucide="help-circle"></i> Support</a>
+            <a href="#"><i data-lucide="bar-chart"></i> Report</a>
+        </nav>
+
+        <a href="../index.html" class="logout"><i data-lucide="log-out"></i> Logout</a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <header class="topbar">
+            <div></div>
+            <div class="admin-status">
+                <i data-lucide="check-circle"></i> Logged in as Admin
+                <i class="avatar" data-lucide="user"></i>
+            </div>
+        </header>
+
+        <section class="page-title">
+            <h1>Profile</h1>
+            <div class="btns">
+                <button class="edit">Edit</button>
+                <button class="back">Back</button>
+            </div>
+        </section>
+
+        <!-- Profile Card -->
+        <section class="profile-card">
+
+            <div class="profile-photo">
+                <i data-lucide="user"></i>
+            </div>
+
+            <div class="profile-grid">
+
+                <div class="field">
+                    <label>Firstname:</label>
+                    <input type="text" value="Jorepe" readonly>
+                </div>
+
+                <div class="field">
+                    <label>Home Address:</label>
+                    <input type="text" value="Purok 12, Catigting, Ubay, Bohol" readonly>
+                </div>
+
+                <div class="field">
+                    <label>Middlename:</label>
+                    <input type="text" value="C." readonly>
+                </div>
+
+                <div class="field">
+                    <label>Mobile No.:</label>
+                    <input type="text" value="09876543211" readonly>
+                </div>
+
+                <div class="field">
+                    <label>Lastname:</label>
+                    <input type="text" value="Aquinas" readonly>
+                </div>
+
+                <div class="field">
+                    <label>Email Address:</label>
+                    <input type="text" value="aguinas091@gmail.com" readonly>
+                </div>
+
+<div class="field">
+    <label>Birthdate:</label>
+    <input type="date" id="birthdate" name="birthdate"
+           value="<?php echo $birthdate; ?>">
+</div>
+
+<div class="field">
+    <label>Age:</label>
+    <input type="text" id="age" name="age"
+           value="<?php echo $age; ?>" readonly>
+</div>
+
+
+                <div class="field">
+                    <label>Gender:</label>
+                    <input type="text" value="Male" readonly>
+                </div>
+
+                <div class="field">
+                    <label>Age:</label>
+                    <input type="text" value="37" readonly>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>

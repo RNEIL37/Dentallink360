@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+}
+
+/* LEFT SIDE */
+.left-panel {
+    width: 40%;
+    background: #120f22;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-content {
+    text-align: left;
+    margin-left: -40px;
+}
+
+.logo-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tooth-logo {
+    width: 85px;
+}
+
+.brand-title {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.slogan {
+    font-family: "Brush Script MT", cursive;
+    font-size: 24px;
+    margin-top: 28px;
+    margin-left: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* RIGHT SIDE */
+.right-panel {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 360px;
+}
+
+.login-box h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.login-box p.subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* INPUT FIELDS */
+.input-group {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 42px;
+    border: 1px solid #dcdcdc;
+    border-radius: 11px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #c053ff;
+    box-shadow: 0 0 0 2px rgba(192, 83, 255, 0.2);
+}
+
+.input-group i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.forgot {
+    text-align: right;
+    margin-top: -5px;
+    margin-bottom: 16px;
+}
+
+.forgot a {
+    font-size: 12px;
+    color: #3f83ff;
+    text-decoration: none;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 14px;
+    background: linear-gradient(to bottom, #d77bff, #a326ff);
+    border: 2.5px solid black;
+    font-size: 17px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}
+
+.register-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.register-text a {
+    color: #3f83ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+/* (Existing styles unchanged) */
+
+/* ==============================
+   ANIMATIONS
+================================*/
+
+/* Fade + slide up animation */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide from left */
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply animation classes */
+.animate-fade-up {
+    animation: fadeUp 0.9s ease-out forwards;
+}
+
+.animate-slide-left {
+    animation: slideLeft 0.9s ease-out forwards;
+}
+
+/* Make animation smoother */
+.login-box {
+    animation-delay: 0.2s;
+}
