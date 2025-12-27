@@ -1,0 +1,78 @@
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f3fafa;
+      height: 100vh;
+      overflow: hidden; /* Prevent scrolling when content fits screen */
+    }
+
+    /* LAYOUT */
+    .layout {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 250px;
+      background: #0a92c7;
+      color: white;
+      height: 100%;
+      padding-top: 20px;
+      flex-shrink: 0;
+    }
+    .sidebar h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+    .sidebar a {
+      display: block;
+      padding: 15px 25px;
+      color: white;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      background: #087ba6;
+    }
+
+    /* MAIN AREA */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* HEADER */
+    .header {
+      height: 60px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+    .header h2 {
+      margin: 0;
+      color: #0a92c7;
+    }
+
+    /* CONTENT */
+    .content {
+      padding: 20px;
+      overflow-y: auto;           /* Scroll only inside content */
+      height: calc(100vh - 60px); /* Full remaining space */
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
