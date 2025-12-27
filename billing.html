@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Clinic Billing</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #dff6ff, #b8eaff);
+      background-attachment: fixed;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Background pattern */
+    .background-pattern {
+      position: fixed;
+      inset: 0;
+      background-image: url('https://i.imgur.com/SsHM3UQ.png');
+      opacity: 0.08;
+      z-index: -1;
+    }
+
+    /* LAYOUT */
+    .layout {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 250px;
+      background: #0a92c7;
+      color: white;
+      height: 100%;
+      padding-top: 20px;
+      flex-shrink: 0;
+    }
+    .sidebar h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+    .sidebar a {
+      display: block;
+      padding: 15px 25px;
+      color: white;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      background: #087ba6;
+    }
+
+    /* MAIN AREA */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* HEADER */
+    .header {
+      height: 60px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+    .header h2 {
+      margin: 0;
+      color: #0a92c7;
+    }
+
+    /* CONTENT */
+    .content {
+      padding: 30px;
+      overflow-y: auto;
+      height: calc(100vh - 60px);
+    }
+
+    /* FORM BOX */
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+      max-width: 700px;
+    }
+
+    h1 {
+      color: #0a92c7;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #0a92c7;
+      color: white;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+    button:hover {
+      background: #087ba6;
+    }
+
+    .total-box {
+      background: #e7f7ff;
+      padding: 15px;
+      border-left: 4px solid #0a92c7;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="background-pattern"></div>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Dental Clinic</h2>
+    <a href="Dashboard.html">Dashboard</a>
+    <a href="appointment.html">Appointments</a>
+    <a href="#">Patients</a>
+    <a href="../Realtime/chat.html">Support</a>
+    <a href="billing.html">Billing</a>
+    <a href="../index.html">Log Out</a>
+  </div>
+
+  <!-- MAIN AREA -->
+  <div class="main">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h2>Billing</h2>
+      <div class="user">Welcome, Admin</div>
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="content">
+      <div class="container">
+        <h1>Billing Section</h1>
+
+        <form>
+          <label>Patient Name</label>
+          <input type="text" placeholder="Enter patient name">
+
+          <label>Treatment</label>
+          <select id="treatment" onchange="updateTotal()">
+            <option value="0">Select Treatment</option>
+            <option value="500">Teeth Cleaning – $500</option>
+            <option value="1200">Tooth Extraction – $1,200</option>
+            <option value="3500">Root Canal – $3,500</option>
+            <option value="2500">Dental Filling – $2,500</option>
+          </select>
+
+          <label>Additional Charges</label>
+          <input type="number" id="extra" placeholder="Enter extra amount" oninput="updateTotal()">
+
+          <div class="total-box" id="total">Total Amount: $0</div>
+
+          <button type="button" onclick="alert('Billing Saved Successfully!')">
+            Save Bill
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  function updateTotal() {
+    const treatment = parseFloat(document.getElementById("treatment").value);
+    const extra = parseFloat(document.getElementById("extra").value) || 0;
+    const total = treatment + extra;
+    document.getElementById("total").textContent = "Total Amount: $" + total;
+  }
+</script>
+
+</body>
+</html>
